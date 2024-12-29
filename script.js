@@ -4,7 +4,7 @@
     id: 'dall-e',
     name: 'DALL-E',
     category: 'image',
-    description: 'OpenAI's advanced image generation model for creating realistic images and art from text descriptions.',
+    description: "OpenAI's advanced image generation model for creating realistic images and art from text descriptions.",
     longDescription: 'DALL-E uses advanced AI to create, edit, and modify images based on natural language descriptions.',
     url: 'https://openai.com/dall-e-3',
     isNew: false,
@@ -946,7 +946,7 @@
     name: 'Claude 2',
     category: 'text',
     description: 'Advanced AI language model with enhanced reasoning capabilities.',
-    longDescription: 'Anthropic's AI assistant with improved context understanding and longer conversations.',
+    longDescription: "Anthropic's AI assistant with improved context understanding and longer conversations.",
     url: 'https://claude.ai',
     isNew: true,
     pricing: 'freemium',
@@ -963,7 +963,7 @@
     id: 'gpt4-alternative',
     name: 'PaLM 2',
     category: 'text',
-    description: 'Google's advanced language model for text generation and analysis.',
+    description: "Google's advanced language model for text generation and analysis.",
     longDescription: 'Powerful language model with enhanced multilingual capabilities.',
     url: 'https://palm.google.com',
     isNew: true,
@@ -998,7 +998,7 @@
     id: 'dalle-alternative',
     name: 'Imagen',
     category: 'image',
-    description: 'Google's AI image generation model.',
+    description: "Google's AI image generation model.",
     longDescription: 'High-fidelity image generation with enhanced text understanding.',
     url: 'https://imagen.research.google',
     isNew: true,
@@ -1121,381 +1121,381 @@
 ];
 
   // Add these new tools to your existing toolsData array
-// const newTools = [
-//     {
-//         id: 'github-copilot',
-//         name: 'GitHub Copilot',
-//         category: 'coding',
-//         description: 'AI-powered code completion and suggestion tool.',
-//         longDescription: 'GitHub Copilot is an AI pair programmer that offers code suggestions in real-time as you type.',
-//         url: 'https://github.com/features/copilot',
-//         isNew: false,
-//         pricing: 'paid',
-//         pricingDetails: {
-//             paid: '$10/month for individuals, free for students'
-//         },
-//         tags: ['coding', 'programming', 'development'],
-//         rating: 4.8,
-//         usersCount: '1M+'
-//     },
-//     {
-//         id: 'notion-ai',
-//         name: 'Notion AI',
-//         category: 'productivity',
-//         description: 'AI-powered writing and organization within Notion.',
-//         longDescription: 'Enhance your Notion workspace with AI-powered writing, summarization, and organization features.',
-//         url: 'https://notion.so',
-//         isNew: false,
-//         pricing: 'freemium',
-//         pricingDetails: {
-//             free: 'Basic Notion features',
-//             paid: '$10/month for AI features'
-//         },
-//         tags: ['productivity', 'writing', 'organization'],
-//         rating: 4.7,
-//         usersCount: '3M+'
-//     },
-//     {
-//         id: 'blender-ai',
-//         name: 'Blender AI Tools',
-//         category: '3d',
-//         description: '3D modeling and animation AI tools for Blender.',
-//         longDescription: 'AI-powered tools for Blender that help with modeling, texturing, and animation.',
-//         url: 'https://www.blender.org',
-//         isNew: true,
-//         pricing: 'free',
-//         pricingDetails: {
-//             free: 'All features included'
-//         },
-//         tags: ['3D', 'animation', 'modeling'],
-//         rating: 4.6,
-//         usersCount: '500K+'
-//     },
-//     {
-//         id: 'scholarai',
-//         name: 'Scholar AI',
-//         category: 'research',
-//         description: 'AI research assistant for academic papers.',
-//         longDescription: 'Helps researchers find, summarize, and analyze academic papers using AI.',
-//         url: 'https://scholarai.io',
-//         isNew: true,
-//         pricing: 'freemium',
-//         pricingDetails: {
-//             free: 'Basic search and summaries',
-//             paid: '$15/month for advanced features'
-//         },
-//         tags: ['research', 'academic', 'papers'],
-//         rating: 4.5,
-//         usersCount: '200K+'
-//     },
-//     {
-//         id: 'duolingo-ai',
-//         name: 'Duolingo AI',
-//         category: 'education',
-//         description: 'AI-powered language learning platform.',
-//         longDescription: 'Personalized language learning with AI-adapted lessons and conversations.',
-//         url: 'https://www.duolingo.com',
-//         isNew: false,
-//         pricing: 'freemium',
-//         pricingDetails: {
-//             free: 'Basic lessons',
-//             paid: '$7/month for premium features'
-//         },
-//         tags: ['education', 'language', 'learning'],
-//         rating: 4.8,
-//         usersCount: '50M+'
-//     },
-//     {
-//         id: 'salesforce-einstein',
-//         name: 'Salesforce Einstein',
-//         category: 'business',
-//         description: 'AI-powered CRM and business intelligence.',
-//         longDescription: 'AI tools for sales predictions, customer insights, and automation within Salesforce.',
-//         url: 'https://www.salesforce.com/products/einstein/overview/',
-//         isNew: false,
-//         pricing: 'paid',
-//         pricingDetails: {
-//             paid: 'Contact for pricing'
-//         },
-//         tags: ['business', 'CRM', 'analytics'],
-//         rating: 4.6,
-//         usersCount: '2M+'
-//     },
-//     {
-//         id: 'semrush-ai',
-//         name: 'Semrush AI Writing',
-//         category: 'marketing',
-//         description: 'AI-powered SEO and content marketing tools.',
-//         longDescription: 'Create SEO-optimized content and marketing materials with AI assistance.',
-//         url: 'https://www.semrush.com',
-//         isNew: true,
-//         pricing: 'freemium',
-//         pricingDetails: {
-//             free: 'Limited features',
-//             paid: 'Starting at $119.95/month'
-//         },
-//         tags: ['marketing', 'SEO', 'content'],
-//         rating: 4.7,
-//         usersCount: '1M+'
-//     },
-//     {
-//         id: 'mixamo',
-//         name: 'Mixamo',
-//         category: '3d',
-//         description: 'AI-powered 3D character animation.',
-//         longDescription: 'Automatically rig and animate 3D characters with AI technology.',
-//         url: 'https://www.mixamo.com',
-//         isNew: false,
-//         pricing: 'free',
-//         pricingDetails: {
-//             free: 'All features with Adobe account'
-//         },
-//         tags: ['3D', 'animation', 'characters'],
-//         rating: 4.5,
-//         usersCount: '1.5M+'
-//     },
-//     {
-//         id: 'grammarly-business',
-//         name: 'Grammarly Business',
-//         category: 'business',
-//         description: 'AI writing assistant for teams and businesses.',
-//         longDescription: 'Enterprise-level AI writing and editing tools with team collaboration features.',
-//         url: 'https://www.grammarly.com/business',
-//         isNew: false,
-//         pricing: 'paid',
-//         pricingDetails: {
-//             paid: '$15/member/month'
-//         },
-//         tags: ['business', 'writing', 'collaboration'],
-//         rating: 4.7,
-//         usersCount: '50K+'
-//     },
-//     {
-//         id: 'kahoot-ai',
-//         name: 'Kahoot! AI',
-//         category: 'education',
-//         description: 'AI-powered interactive learning platform.',
-//         longDescription: 'Create engaging quizzes and educational content with AI assistance.',
-//         url: 'https://kahoot.com',
-//         isNew: true,
-//         pricing: 'freemium',
-//         pricingDetails: {
-//             free: 'Basic features',
-//             paid: 'Starting at $3/month'
-//         },
-//         tags: ['education', 'quiz', 'learning'],
-//         rating: 4.6,
-//         usersCount: '5M+'
-//     },
-//   // GAMING AI TOOLS
-// {
-//     id: 'nvidia-dlss',
-//     name: 'NVIDIA DLSS',
-//     category: 'gaming',
-//     description: 'AI-powered graphics upscaling for games.',
-//     longDescription: 'Deep Learning Super Sampling technology for improved gaming performance and visuals.',
-//     url: 'https://www.nvidia.com/dlss',
-//     isNew: false,
-//     pricing: 'free',
-//     pricingDetails: {
-//         free: 'Included with supported GPUs'
-//     },
-//     tags: ['gaming', 'graphics', 'performance'],
-//     rating: 4.8,
-//     usersCount: '50M+'
-// },
-// {
-//     id: 'modl-ai',
-//     name: 'modl.ai',
-//     category: 'gaming',
-//     description: 'AI game testing and development platform.',
-//     longDescription: 'Automated game testing and balancing using AI agents.',
-//     url: 'https://modl.ai',
-//     isNew: true,
-//     pricing: 'paid',
-//     pricingDetails: {
-//         paid: 'Custom enterprise pricing'
-//     },
-//     tags: ['game development', 'testing', 'automation'],
-//     rating: 4.5,
-//     usersCount: '10K+'
-// },
+const newTools = [
+    {
+        id: 'github-copilot',
+        name: 'GitHub Copilot',
+        category: 'coding',
+        description: 'AI-powered code completion and suggestion tool.',
+        longDescription: 'GitHub Copilot is an AI pair programmer that offers code suggestions in real-time as you type.',
+        url: 'https://github.com/features/copilot',
+        isNew: false,
+        pricing: 'paid',
+        pricingDetails: {
+            paid: '$10/month for individuals, free for students'
+        },
+        tags: ['coding', 'programming', 'development'],
+        rating: 4.8,
+        usersCount: '1M+'
+    },
+    {
+        id: 'notion-ai',
+        name: 'Notion AI',
+        category: 'productivity',
+        description: 'AI-powered writing and organization within Notion.',
+        longDescription: 'Enhance your Notion workspace with AI-powered writing, summarization, and organization features.',
+        url: 'https://notion.so',
+        isNew: false,
+        pricing: 'freemium',
+        pricingDetails: {
+            free: 'Basic Notion features',
+            paid: '$10/month for AI features'
+        },
+        tags: ['productivity', 'writing', 'organization'],
+        rating: 4.7,
+        usersCount: '3M+'
+    },
+    {
+        id: 'blender-ai',
+        name: 'Blender AI Tools',
+        category: '3d',
+        description: '3D modeling and animation AI tools for Blender.',
+        longDescription: 'AI-powered tools for Blender that help with modeling, texturing, and animation.',
+        url: 'https://www.blender.org',
+        isNew: true,
+        pricing: 'free',
+        pricingDetails: {
+            free: 'All features included'
+        },
+        tags: ['3D', 'animation', 'modeling'],
+        rating: 4.6,
+        usersCount: '500K+'
+    },
+    {
+        id: 'scholarai',
+        name: 'Scholar AI',
+        category: 'research',
+        description: 'AI research assistant for academic papers.',
+        longDescription: 'Helps researchers find, summarize, and analyze academic papers using AI.',
+        url: 'https://scholarai.io',
+        isNew: true,
+        pricing: 'freemium',
+        pricingDetails: {
+            free: 'Basic search and summaries',
+            paid: '$15/month for advanced features'
+        },
+        tags: ['research', 'academic', 'papers'],
+        rating: 4.5,
+        usersCount: '200K+'
+    },
+    {
+        id: 'duolingo-ai',
+        name: 'Duolingo AI',
+        category: 'education',
+        description: 'AI-powered language learning platform.',
+        longDescription: 'Personalized language learning with AI-adapted lessons and conversations.',
+        url: 'https://www.duolingo.com',
+        isNew: false,
+        pricing: 'freemium',
+        pricingDetails: {
+            free: 'Basic lessons',
+            paid: '$7/month for premium features'
+        },
+        tags: ['education', 'language', 'learning'],
+        rating: 4.8,
+        usersCount: '50M+'
+    },
+    {
+        id: 'salesforce-einstein',
+        name: 'Salesforce Einstein',
+        category: 'business',
+        description: 'AI-powered CRM and business intelligence.',
+        longDescription: 'AI tools for sales predictions, customer insights, and automation within Salesforce.',
+        url: 'https://www.salesforce.com/products/einstein/overview/',
+        isNew: false,
+        pricing: 'paid',
+        pricingDetails: {
+            paid: 'Contact for pricing'
+        },
+        tags: ['business', 'CRM', 'analytics'],
+        rating: 4.6,
+        usersCount: '2M+'
+    },
+    {
+        id: 'semrush-ai',
+        name: 'Semrush AI Writing',
+        category: 'marketing',
+        description: 'AI-powered SEO and content marketing tools.',
+        longDescription: 'Create SEO-optimized content and marketing materials with AI assistance.',
+        url: 'https://www.semrush.com',
+        isNew: true,
+        pricing: 'freemium',
+        pricingDetails: {
+            free: 'Limited features',
+            paid: 'Starting at $119.95/month'
+        },
+        tags: ['marketing', 'SEO', 'content'],
+        rating: 4.7,
+        usersCount: '1M+'
+    },
+    {
+        id: 'mixamo',
+        name: 'Mixamo',
+        category: '3d',
+        description: 'AI-powered 3D character animation.',
+        longDescription: 'Automatically rig and animate 3D characters with AI technology.',
+        url: 'https://www.mixamo.com',
+        isNew: false,
+        pricing: 'free',
+        pricingDetails: {
+            free: 'All features with Adobe account'
+        },
+        tags: ['3D', 'animation', 'characters'],
+        rating: 4.5,
+        usersCount: '1.5M+'
+    },
+    {
+        id: 'grammarly-business',
+        name: 'Grammarly Business',
+        category: 'business',
+        description: 'AI writing assistant for teams and businesses.',
+        longDescription: 'Enterprise-level AI writing and editing tools with team collaboration features.',
+        url: 'https://www.grammarly.com/business',
+        isNew: false,
+        pricing: 'paid',
+        pricingDetails: {
+            paid: '$15/member/month'
+        },
+        tags: ['business', 'writing', 'collaboration'],
+        rating: 4.7,
+        usersCount: '50K+'
+    },
+    {
+        id: 'kahoot-ai',
+        name: 'Kahoot! AI',
+        category: 'education',
+        description: 'AI-powered interactive learning platform.',
+        longDescription: 'Create engaging quizzes and educational content with AI assistance.',
+        url: 'https://kahoot.com',
+        isNew: true,
+        pricing: 'freemium',
+        pricingDetails: {
+            free: 'Basic features',
+            paid: 'Starting at $3/month'
+        },
+        tags: ['education', 'quiz', 'learning'],
+        rating: 4.6,
+        usersCount: '5M+'
+    },
+  // GAMING AI TOOLS
+{
+    id: 'nvidia-dlss',
+    name: 'NVIDIA DLSS',
+    category: 'gaming',
+    description: 'AI-powered graphics upscaling for games.',
+    longDescription: 'Deep Learning Super Sampling technology for improved gaming performance and visuals.',
+    url: 'https://www.nvidia.com/dlss',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Included with supported GPUs'
+    },
+    tags: ['gaming', 'graphics', 'performance'],
+    rating: 4.8,
+    usersCount: '50M+'
+},
+{
+    id: 'modl-ai',
+    name: 'modl.ai',
+    category: 'gaming',
+    description: 'AI game testing and development platform.',
+    longDescription: 'Automated game testing and balancing using AI agents.',
+    url: 'https://modl.ai',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom enterprise pricing'
+    },
+    tags: ['game development', 'testing', 'automation'],
+    rating: 4.5,
+    usersCount: '10K+'
+},
 
-// // SCIENTIFIC RESEARCH AI TOOLS
-// {
-//     id: 'alphafold',
-//     name: 'AlphaFold',
-//     category: 'science',
-//     description: 'AI system for protein structure prediction.',
-//     longDescription: 'DeepMind's AI system for predicting 3D protein structures.',
-//     url: 'https://alphafold.ebi.ac.uk',
-//     isNew: false,
-//     pricing: 'free',
-//     pricingDetails: {
-//         free: 'Open access for research'
-//     },
-//     tags: ['protein folding', 'biology', 'research'],
-//     rating: 4.9,
-//     usersCount: '1M+'
-// },
-// {
-//     id: 'deepchem',
-//     name: 'DeepChem',
-//     category: 'science',
-//     description: 'AI platform for drug discovery and chemistry.',
-//     longDescription: 'Open-source AI tools for chemical science and drug development.',
-//     url: 'https://deepchem.io',
-//     isNew: false,
-//     pricing: 'free',
-//     pricingDetails: {
-//         free: 'Open source'
-//     },
-//     tags: ['chemistry', 'drug discovery', 'research'],
-//     rating: 4.6,
-//     usersCount: '100K+'
-// },
+// SCIENTIFIC RESEARCH AI TOOLS
+{
+    id: 'alphafold',
+    name: 'AlphaFold',
+    category: 'science',
+    description: 'AI system for protein structure prediction.',
+    longDescription: "DeepMind's AI system for predicting 3D protein structures.",
+    url: 'https://alphafold.ebi.ac.uk',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Open access for research'
+    },
+    tags: ['protein folding', 'biology', 'research'],
+    rating: 4.9,
+    usersCount: '1M+'
+},
+{
+    id: 'deepchem',
+    name: 'DeepChem',
+    category: 'science',
+    description: 'AI platform for drug discovery and chemistry.',
+    longDescription: 'Open-source AI tools for chemical science and drug development.',
+    url: 'https://deepchem.io',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Open source'
+    },
+    tags: ['chemistry', 'drug discovery', 'research'],
+    rating: 4.6,
+    usersCount: '100K+'
+},
 
-// // ROBOTICS AI TOOLS
-// {
-//     id: 'ros-ai',
-//     name: 'ROS AI',
-//     category: 'robotics',
-//     description: 'AI framework for robot operating systems.',
-//     longDescription: 'Artificial Intelligence tools and libraries for robotic systems.',
-//     url: 'https://www.ros.org',
-//     isNew: false,
-//     pricing: 'free',
-//     pricingDetails: {
-//         free: 'Open source'
-//     },
-//     tags: ['robotics', 'automation', 'development'],
-//     rating: 4.7,
-//     usersCount: '500K+'
-// },
-// {
-//     id: 'nvidia-isaac',
-//     name: 'NVIDIA Isaac',
-//     category: 'robotics',
-//     description: 'AI platform for robotics development.',
-//     longDescription: 'Comprehensive toolkit for building and deploying robotic AI applications.',
-//     url: 'https://developer.nvidia.com/isaac-sdk',
-//     isNew: false,
-//     pricing: 'freemium',
-//     pricingDetails: {
-//         free: 'Basic SDK',
-//         paid: 'Enterprise features'
-//     },
-//     tags: ['robotics', 'simulation', 'development'],
-//     rating: 4.6,
-//     usersCount: '100K+'
-// },
+// ROBOTICS AI TOOLS
+{
+    id: 'ros-ai',
+    name: 'ROS AI',
+    category: 'robotics',
+    description: 'AI framework for robot operating systems.',
+    longDescription: 'Artificial Intelligence tools and libraries for robotic systems.',
+    url: 'https://www.ros.org',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Open source'
+    },
+    tags: ['robotics', 'automation', 'development'],
+    rating: 4.7,
+    usersCount: '500K+'
+},
+{
+    id: 'nvidia-isaac',
+    name: 'NVIDIA Isaac',
+    category: 'robotics',
+    description: 'AI platform for robotics development.',
+    longDescription: 'Comprehensive toolkit for building and deploying robotic AI applications.',
+    url: 'https://developer.nvidia.com/isaac-sdk',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic SDK',
+        paid: 'Enterprise features'
+    },
+    tags: ['robotics', 'simulation', 'development'],
+    rating: 4.6,
+    usersCount: '100K+'
+},
 
-// // CYBERSECURITY AI TOOLS
-// {
-//     id: 'darktrace',
-//     name: 'Darktrace',
-//     category: 'security',
-//     description: 'AI-powered cyber defense platform.',
-//     longDescription: 'Enterprise security using AI to detect and respond to threats.',
-//     url: 'https://www.darktrace.com',
-//     isNew: false,
-//     pricing: 'paid',
-//     pricingDetails: {
-//         paid: 'Enterprise pricing'
-//     },
-//     tags: ['cybersecurity', 'threat detection', 'enterprise'],
-//     rating: 4.8,
-//     usersCount: '5K+'
-// },
-// {
-//     id: 'cylance',
-//     name: 'Cylance',
-//     category: 'security',
-//     description: 'AI antivirus and endpoint protection.',
-//     longDescription: 'Predictive AI-based security solution for endpoint protection.',
-//     url: 'https://www.cylance.com',
-//     isNew: false,
-//     pricing: 'paid',
-//     pricingDetails: {
-//         paid: 'Per endpoint pricing'
-//     },
-//     tags: ['security', 'antivirus', 'endpoint protection'],
-//     rating: 4.7,
-//     usersCount: '100K+'
-// },
+// CYBERSECURITY AI TOOLS
+{
+    id: 'darktrace',
+    name: 'Darktrace',
+    category: 'security',
+    description: 'AI-powered cyber defense platform.',
+    longDescription: 'Enterprise security using AI to detect and respond to threats.',
+    url: 'https://www.darktrace.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise pricing'
+    },
+    tags: ['cybersecurity', 'threat detection', 'enterprise'],
+    rating: 4.8,
+    usersCount: '5K+'
+},
+{
+    id: 'cylance',
+    name: 'Cylance',
+    category: 'security',
+    description: 'AI antivirus and endpoint protection.',
+    longDescription: 'Predictive AI-based security solution for endpoint protection.',
+    url: 'https://www.cylance.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Per endpoint pricing'
+    },
+    tags: ['security', 'antivirus', 'endpoint protection'],
+    rating: 4.7,
+    usersCount: '100K+'
+},
 
-// // AGRICULTURE AI TOOLS
-// {
-//     id: 'prospera',
-//     name: 'Prospera',
-//     category: 'agriculture',
-//     description: 'AI-powered agriculture management platform.',
-//     longDescription: 'Computer vision and AI for crop management and optimization.',
-//     url: 'https://prospera.ag',
-//     isNew: false,
-//     pricing: 'paid',
-//     pricingDetails: {
-//         paid: 'Custom pricing'
-//     },
-//     tags: ['agriculture', 'crop management', 'automation'],
-//     rating: 4.6,
-//     usersCount: '10K+'
-// },
-// {
-//     id: 'farmwise',
-//     name: 'FarmWise',
-//     category: 'agriculture',
-//     description: 'AI farming robots and automation.',
-//     longDescription: 'Autonomous farming solutions using AI and robotics.',
-//     url: 'https://farmwise.io',
-//     isNew: true,
-//     pricing: 'paid',
-//     pricingDetails: {
-//         paid: 'Enterprise solutions'
-//     },
-//     tags: ['farming', 'robotics', 'automation'],
-//     rating: 4.5,
-//     usersCount: '1K+'
-// },
+// AGRICULTURE AI TOOLS
+{
+    id: 'prospera',
+    name: 'Prospera',
+    category: 'agriculture',
+    description: 'AI-powered agriculture management platform.',
+    longDescription: 'Computer vision and AI for crop management and optimization.',
+    url: 'https://prospera.ag',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom pricing'
+    },
+    tags: ['agriculture', 'crop management', 'automation'],
+    rating: 4.6,
+    usersCount: '10K+'
+},
+{
+    id: 'farmwise',
+    name: 'FarmWise',
+    category: 'agriculture',
+    description: 'AI farming robots and automation.',
+    longDescription: 'Autonomous farming solutions using AI and robotics.',
+    url: 'https://farmwise.io',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise solutions'
+    },
+    tags: ['farming', 'robotics', 'automation'],
+    rating: 4.5,
+    usersCount: '1K+'
+},
 
-// // CLIMATE & ENVIRONMENT AI TOOLS
-// {
-//     id: 'climatemind',
-//     name: 'ClimateMind',
-//     category: 'climate',
-//     description: 'AI for climate change analysis and solutions.',
-//     longDescription: 'AI platform for understanding and addressing climate challenges.',
-//     url: 'https://climatemind.org',
-//     isNew: true,
-//     pricing: 'free',
-//     pricingDetails: {
-//         free: 'Open access'
-//     },
-//     tags: ['climate', 'environment', 'sustainability'],
-//     rating: 4.4,
-//     usersCount: '50K+'
-// },
-// {
-//     id: 'terrawatch',
-//     name: 'TerraWatch',
-//     category: 'climate',
-//     description: 'AI-powered environmental monitoring.',
-//     longDescription: 'Satellite imagery analysis for environmental protection.',
-//     url: 'https://terrawatch.ai',
-//     isNew: true,
-//     pricing: 'freemium',
-//     pricingDetails: {
-//         free: 'Basic monitoring',
-//         paid: 'Advanced features'
-//     },
-//     tags: ['environmental monitoring', 'satellite', 'analysis'],
-//     rating: 4.5,
-//     usersCount: '10K+'
-// }
-// ];
+// CLIMATE & ENVIRONMENT AI TOOLS
+{
+    id: 'climatemind',
+    name: 'ClimateMind',
+    category: 'climate',
+    description: 'AI for climate change analysis and solutions.',
+    longDescription: 'AI platform for understanding and addressing climate challenges.',
+    url: 'https://climatemind.org',
+    isNew: true,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Open access'
+    },
+    tags: ['climate', 'environment', 'sustainability'],
+    rating: 4.4,
+    usersCount: '50K+'
+},
+{
+    id: 'terrawatch',
+    name: 'TerraWatch',
+    category: 'climate',
+    description: 'AI-powered environmental monitoring.',
+    longDescription: 'Satellite imagery analysis for environmental protection.',
+    url: 'https://terrawatch.ai',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic monitoring',
+        paid: 'Advanced features'
+    },
+    tags: ['environmental monitoring', 'satellite', 'analysis'],
+    rating: 4.5,
+    usersCount: '10K+'
+}
+];
 
 // // Add these new tools to your existing toolsData array
-// toolsData.push(...newTools);
+toolsData.push(...newTools);
 
         // Function to create tool cards
         function displayTools(tools) {
