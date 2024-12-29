@@ -939,6 +939,183 @@
     rating: 4.6,
     usersCount: '10K+',
     features: ['Defect detection', 'Quality assurance', 'Real-time monitoring']
+},
+  // ALTERNATIVE TEXT AI TOOLS
+{
+    id: 'chatgpt-alternatives',
+    name: 'Claude 2',
+    category: 'text',
+    description: 'Advanced AI language model with enhanced reasoning capabilities.',
+    longDescription: 'Anthropic's AI assistant with improved context understanding and longer conversations.',
+    url: 'https://claude.ai',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic access',
+        paid: '$20/month for Claude Pro'
+    },
+    tags: ['chatbot', 'writing', 'analysis'],
+    rating: 4.9,
+    usersCount: '10M+',
+    features: ['Longer context window', 'Code analysis', 'Research assistance']
+},
+{
+    id: 'gpt4-alternative',
+    name: 'PaLM 2',
+    category: 'text',
+    description: 'Google's advanced language model for text generation and analysis.',
+    longDescription: 'Powerful language model with enhanced multilingual capabilities.',
+    url: 'https://palm.google.com',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'API access pricing'
+    },
+    tags: ['language model', 'AI', 'multilingual'],
+    rating: 4.8,
+    usersCount: '5M+'
+},
+
+// ALTERNATIVE IMAGE AI TOOLS
+{
+    id: 'midjourney-alternative1',
+    name: 'Stable Diffusion XL',
+    category: 'image',
+    description: 'Open-source AI image generation with enhanced capabilities.',
+    longDescription: 'Advanced version of Stable Diffusion with improved quality and features.',
+    url: 'https://stability.ai/stable-diffusion',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Open source version',
+        paid: 'Hosted solutions available'
+    },
+    tags: ['image generation', 'art', 'open-source'],
+    rating: 4.7,
+    usersCount: '8M+'
+},
+{
+    id: 'dalle-alternative',
+    name: 'Imagen',
+    category: 'image',
+    description: 'Google's AI image generation model.',
+    longDescription: 'High-fidelity image generation with enhanced text understanding.',
+    url: 'https://imagen.research.google',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise access'
+    },
+    tags: ['image generation', 'AI art', 'enterprise'],
+    rating: 4.8,
+    usersCount: '1M+'
+},
+
+// ALTERNATIVE VIDEO AI TOOLS
+{
+    id: 'synthesia-alternative',
+    name: 'D-ID',
+    category: 'video',
+    description: 'AI-powered video creation with digital humans.',
+    longDescription: 'Create videos with AI-generated presenters and custom scripts.',
+    url: 'https://www.d-id.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Limited generations',
+        paid: 'Starting at $25/month'
+    },
+    tags: ['video creation', 'digital humans', 'presentations'],
+    rating: 4.6,
+    usersCount: '2M+'
+},
+{
+    id: 'runway-alternative',
+    name: 'Descript Video',
+    category: 'video',
+    description: 'AI video editing with text-based editing capabilities.',
+    longDescription: 'Edit videos by editing text, with powerful AI features.',
+    url: 'https://www.descript.com/video',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Starting at $12/month'
+    },
+    tags: ['video editing', 'transcription', 'content creation'],
+    rating: 4.7,
+    usersCount: '1M+'
+},
+
+// ALTERNATIVE AUDIO AI TOOLS
+{
+    id: 'murf-alternative',
+    name: 'Play.ht',
+    category: 'audio',
+    description: 'AI voice generation and text-to-speech platform.',
+    longDescription: 'Create natural-sounding voiceovers in multiple languages.',
+    url: 'https://play.ht',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Limited words',
+        paid: 'Starting at $14.99/month'
+    },
+    tags: ['text-to-speech', 'voice generation', 'voiceover'],
+    rating: 4.5,
+    usersCount: '500K+'
+},
+{
+    id: 'elevenlabs-alternative',
+    name: 'Resemble AI',
+    category: 'audio',
+    description: 'AI voice cloning and synthesis platform.',
+    longDescription: 'Create custom AI voices with emotional control.',
+    url: 'https://www.resemble.ai',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom pricing'
+    },
+    tags: ['voice cloning', 'synthesis', 'custom voices'],
+    rating: 4.6,
+    usersCount: '200K+'
+},
+
+// ALTERNATIVE BUSINESS AI TOOLS
+{
+    id: 'jasper-alternative',
+    name: 'WriteSonic',
+    category: 'text',
+    description: 'AI writing assistant for marketing and content.',
+    longDescription: 'Generate high-quality content for various marketing needs.',
+    url: 'https://writesonic.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Trial credits',
+        paid: 'Starting at $15/month'
+    },
+    tags: ['content writing', 'marketing', 'copywriting'],
+    rating: 4.5,
+    usersCount: '400K+'
+},
+{
+    id: 'copy-ai-alternative',
+    name: 'Rytr',
+    category: 'text',
+    description: 'AI writing tool for various content types.',
+    longDescription: 'Generate content in multiple formats and styles.',
+    url: 'https://rytr.me',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: '10,000 characters/month',
+        paid: 'Starting at $9/month'
+    },
+    tags: ['writing', 'content creation', 'marketing'],
+    rating: 4.4,
+    usersCount: '1M+'
 }
 
 
