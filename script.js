@@ -1,392 +1,948 @@
   // Enhanced Tool Data with Pricing Information
         const toolsData = [
     {
-        id: 'chatgpt',
-        name: 'ChatGPT',
-        category: 'text',
-        description: 'Leading AI chatbot for text generation, writing, and coding assistance.',
-        longDescription: "ChatGPT is OpenAI's flagship conversational AI model capable of understanding and generating human-like text. It can help with writing, coding, analysis, and general questions.",
-        url: 'https://chat.openai.com',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Access to GPT-3.5',
-            paid: '$20/month for GPT-4, faster responses, and priority access'
-        },
-        tags: ['chatbot', 'writing', 'coding', 'assistant'],
-        rating: 4.8,
-        usersCount: '100M+'
+    id: 'dall-e',
+    name: 'DALL-E',
+    category: 'image',
+    description: 'OpenAI's advanced image generation model for creating realistic images and art from text descriptions.',
+    longDescription: 'DALL-E uses advanced AI to create, edit, and modify images based on natural language descriptions.',
+    url: 'https://openai.com/dall-e-3',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        free: 'Limited free credits',
+        paid: 'Pay-per-generation'
     },
-    {
-        id: 'midjourney',
-        name: 'Midjourney',
-        category: 'image',
-        description: 'Advanced AI art generator creating stunning, artistic images from text descriptions.',
-        longDescription: 'Midjourney is a powerful AI art generator known for its artistic style and high-quality outputs. It excels in creating detailed, imaginative artwork from text prompts.',
-        url: 'https://www.midjourney.com',
-        isNew: false,
-        pricing: 'paid',
-        pricingDetails: {
-            paid: 'Starting at $10/month for basic access'
-        },
-        tags: ['art', 'image generation', 'design', 'creative'],
-        rating: 4.9,
-        usersCount: '15M+'
+    tags: ['image generation', 'art', 'design'],
+    rating: 4.7,
+    usersCount: '10M+'
+},
+{
+    id: 'stable-diffusion',
+    name: 'Stable Diffusion',
+    category: 'image',
+    description: 'Open-source AI model for generating high-quality images from text descriptions.',
+    longDescription: 'A powerful open-source image generation model with various implementations and customization options.',
+    url: 'https://stability.ai',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Open-source version',
+        paid: 'Hosted solutions available'
     },
-    {
-        id: 'claude',
-        name: 'Claude',
-        category: 'text',
-        description: "Anthropic's advanced AI assistant for writing, analysis, and research.",
-        longDescription: 'Claude is known for its nuanced understanding and ability to handle complex tasks. It excels in writing, analysis, and maintaining longer conversations.',
-        url: 'https://claude.ai',
-        isNew: true,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic access with daily limits',
-            paid: 'Claude Pro for $20/month'
-        },
-        tags: ['writing', 'research', 'analysis', 'assistant'],
-        rating: 4.7,
-        usersCount: '5M+'
+    tags: ['image generation', 'art', 'open-source'],
+    rating: 4.6,
+    usersCount: '8M+'
+},
+{
+    id: 'jasper',
+    name: 'Jasper',
+    category: 'text',
+    description: 'AI writing assistant for marketing and content creation.',
+    longDescription: 'Advanced AI writing tool specializing in marketing copy, blog posts, and social media content.',
+    url: 'https://www.jasper.ai',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Starting at $39/month'
     },
-    {
-        id: 'leonardo-ai',
-        name: 'Leonardo AI',
-        category: 'image',
-        description: 'AI image generator specialized in high-quality, customizable artwork.',
-        longDescription: 'Leonardo AI offers advanced image generation capabilities with custom model training and style consistency features.',
-        url: 'https://leonardo.ai',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: '150 images/month',
-            paid: 'Starting at $10/month for more generations'
-        },
-        tags: ['art', 'image generation', 'design'],
-        rating: 4.6,
-        usersCount: '2M+'
+    tags: ['writing', 'marketing', 'content'],
+    rating: 4.5,
+    usersCount: '500K+'
+},
+{
+    id: 'copy-ai',
+    name: 'Copy.ai',
+    category: 'text',
+    description: 'AI copywriting tool for marketing and content creation.',
+    longDescription: 'Generates marketing copy, social media posts, and various types of content using AI.',
+    url: 'https://www.copy.ai',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: '2000 words/month',
+        paid: 'Starting at $36/month'
     },
-    {
-        id: 'synthesia',
-        name: 'Synthesia',
-        category: 'video',
-        description: 'Create AI videos with virtual presenters in multiple languages.',
-        longDescription: 'Synthesia allows you to create professional videos using AI avatars, with support for 120+ languages and customizable templates.',
-        url: 'https://www.synthesia.io',
-        isNew: false,
-        pricing: 'paid',
-        pricingDetails: {
-            paid: 'Starting at $30/month'
-        },
-        tags: ['video creation', 'avatars', 'multilingual'],
-        rating: 4.5,
-        usersCount: '1M+'
+    tags: ['copywriting', 'marketing', 'content'],
+    rating: 4.4,
+    usersCount: '400K+'
+},
+{
+    id: 'synthesia',
+    name: 'Synthesia',
+    category: 'video',
+    description: 'AI video creation platform with virtual presenters.',
+    longDescription: 'Create professional videos using AI avatars in multiple languages.',
+    url: 'https://www.synthesia.io',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Starting at $30/month'
     },
-    {
-        id: 'jasper',
-        name: 'Jasper',
-        category: 'text',
-        description: 'AI writing assistant for marketing and content creation.',
-        longDescription: 'Jasper specializes in creating marketing copy, blog posts, and social media content with AI-powered writing assistance.',
-        url: 'https://www.jasper.ai',
-        isNew: false,
-        pricing: 'paid',
-        pricingDetails: {
-            paid: 'Starting at $39/month'
-        },
-        tags: ['writing', 'marketing', 'content'],
-        rating: 4.6,
-        usersCount: '500K+'
+    tags: ['video creation', 'avatars', 'presentations'],
+    rating: 4.6,
+    usersCount: '300K+'
+},
+{
+    id: 'descript',
+    name: 'Descript',
+    category: 'video',
+    description: 'AI-powered video and audio editing platform.',
+    longDescription: 'Edit videos and audio by editing text, with powerful AI features.',
+    url: 'https://www.descript.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Starting at $12/month'
     },
-    {
-        id: 'runway',
-        name: 'Runway',
-        category: 'video',
-        description: 'Professional AI video editing and generation platform.',
-        longDescription: 'Runway offers advanced AI tools for video editing, effects, and generation, including text-to-video capabilities.',
-        url: 'https://runway.ml',
-        isNew: true,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features with watermark',
-            paid: 'Starting at $15/month'
-        },
-        tags: ['video editing', 'special effects', 'generation'],
-        rating: 4.7,
-        usersCount: '1.5M+'
+    tags: ['video editing', 'audio editing', 'transcription'],
+    rating: 4.7,
+    usersCount: '1M+'
+},
+{
+    id: 'runway',
+    name: 'Runway',
+    category: 'video',
+    description: 'AI-powered video editing and generation platform.',
+    longDescription: 'Professional video editing and generation tools using AI.',
+    url: 'https://runway.ml',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Limited features',
+        paid: 'Starting at $15/month'
     },
-    {
-        id: 'murf',
-        name: 'Murf AI',
-        category: 'audio',
-        description: 'AI voice generator with natural-sounding voices.',
-        longDescription: 'Murf offers high-quality AI voice generation in multiple languages and accents, perfect for voiceovers and content creation.',
-        url: 'https://murf.ai',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Limited minutes with watermark',
-            paid: 'Starting at $29/month'
-        },
-        tags: ['voice generation', 'text-to-speech', 'voiceover'],
-        rating: 4.5,
-        usersCount: '1M+'
+    tags: ['video editing', 'visual effects', 'generation'],
+    rating: 4.5,
+    usersCount: '500K+'
+},
+{
+    id: 'murf',
+    name: 'Murf AI',
+    category: 'audio',
+    description: 'AI voice generator with natural-sounding voices.',
+    longDescription: 'Create voiceovers in multiple languages with AI-powered voices.',
+    url: 'https://murf.ai',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Limited minutes',
+        paid: 'Starting at $29/month'
     },
-    {
-        id: 'tome',
-        name: 'Tome',
-        category: 'presentation',
-        description: 'AI-powered presentation creator with dynamic storytelling.',
-        longDescription: 'Tome uses AI to help create engaging presentations with automatic layout suggestions and content generation.',
-        url: 'https://tome.app',
-        isNew: true,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features',
-            paid: '$10/month for premium features'
-        },
-        tags: ['presentations', 'storytelling', 'design'],
-        rating: 4.4,
-        usersCount: '500K+'
+    tags: ['voice generation', 'text-to-speech', 'voiceover'],
+    rating: 4.5,
+    usersCount: '200K+'
+},
+{
+    id: 'elevenlabs',
+    name: 'ElevenLabs',
+    category: 'audio',
+    description: 'AI voice cloning and generation platform.',
+    longDescription: 'Create realistic AI voices and clone voices with high accuracy.',
+    url: 'https://elevenlabs.io',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Limited characters',
+        paid: 'Starting at $5/month'
     },
-    {
-        id: 'descript',
-        name: 'Descript',
-        category: 'audio',
-        description: 'AI-powered audio and video editing platform.',
-        longDescription: 'Descript offers innovative audio and video editing features including text-based editing and AI voice cloning.',
-        url: 'https://www.descript.com',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features with watermark',
-            paid: 'Starting at $12/month'
-        },
-        tags: ['audio editing', 'video editing', 'transcription'],
-        rating: 4.7,
-        usersCount: '2M+'
+    tags: ['voice cloning', 'text-to-speech', 'audio'],
+    rating: 4.8,
+    usersCount: '300K+'
+},
+{
+    id: 'beautiful-ai',
+    name: 'Beautiful.ai',
+    category: 'presentation',
+    description: 'AI-powered presentation software.',
+    longDescription: 'Create professional presentations automatically with AI design assistance.',
+    url: 'https://www.beautiful.ai',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Starting at $12/month'
     },
-    {
-        id: 'copy-ai',
-        name: 'Copy.ai',
-        category: 'text',
-        description: 'AI copywriting tool for marketing and content.',
-        longDescription: 'Copy.ai helps create marketing copy, social media posts, and various types of content using advanced AI.',
-        url: 'https://www.copy.ai',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: '2000 words/month',
-            paid: 'Starting at $36/month'
-        },
-        tags: ['copywriting', 'marketing', 'content'],
-        rating: 4.5,
-        usersCount: '750K+'
+    tags: ['presentations', 'design', 'slides'],
+    rating: 4.4,
+    usersCount: '200K+'
+},
+
+{
+    id: 'notion-ai',
+    name: 'Notion AI',
+    category: 'productivity',
+    description: 'AI-powered writing and organization within Notion workspace.',
+    longDescription: 'Integrated AI features for writing, summarizing, and organizing content in Notion.',
+    url: 'https://notion.so',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic Notion features',
+        paid: '$10/month for AI features'
     },
-    {
-        id: 'stable-diffusion',
-        name: 'Stable Diffusion',
-        category: 'image',
-        description: 'Open-source AI image generation model.',
-        longDescription: 'Stable Diffusion is a powerful open-source image generation model available through various interfaces and implementations.',
-        url: 'https://stability.ai',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Open-source version',
-            paid: 'Various paid implementations'
-        },
-        tags: ['image generation', 'art', 'open-source'],
-        rating: 4.6,
-        usersCount: '10M+'
+    tags: ['productivity', 'writing', 'organization'],
+    rating: 4.6,
+    usersCount: '3M+'
+},
+{
+    id: 'github-copilot',
+    name: 'GitHub Copilot',
+    category: 'coding',
+    description: 'AI pair programmer that helps write better code faster.',
+    longDescription: 'AI-powered code completion and suggestion tool integrated with popular IDEs.',
+    url: 'https://github.com/features/copilot',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: '$10/month, free for students'
     },
-    {
-        id: 'elevenlabs',
-        name: 'ElevenLabs',
-        category: 'audio',
-        description: 'High-quality AI voice generation and cloning.',
-        longDescription: 'ElevenLabs offers state-of-the-art voice synthesis and cloning capabilities with emotional control.',
-        url: 'https://elevenlabs.io',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Limited characters/month',
-            paid: 'Starting at $5/month'
-        },
-        tags: ['voice synthesis', 'voice cloning', 'text-to-speech'],
-        rating: 4.8,
-        usersCount: '1M+'
+    tags: ['coding', 'programming', 'development'],
+    rating: 4.7,
+    usersCount: '2M+'
+},
+{
+    id: 'grammarly',
+    name: 'Grammarly AI',
+    category: 'text',
+    description: 'AI writing assistant for grammar and style improvement.',
+    longDescription: 'Advanced writing assistance with grammar checking, style suggestions, and tone adjustments.',
+    url: 'https://www.grammarly.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic grammar checking',
+        paid: 'Starting at $12/month'
     },
-    {
-        id: 'gamma',
-        name: 'Gamma',
-        category: 'presentation',
-        description: 'AI-powered presentation and document creation platform.',
-        longDescription: 'Gamma helps create beautiful presentations and documents with AI-assisted design and content generation.',
-        url: 'https://gamma.app',
-        isNew: true,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features',
-            paid: '$10/month for premium'
-        },
-        tags: ['presentations', 'documents', 'design'],
-        rating: 4.5,
-        usersCount: '300K+'
+    tags: ['writing', 'grammar', 'editing'],
+    rating: 4.7,
+    usersCount: '30M+'
+},
+{
+    id: 'firefly',
+    name: 'Adobe Firefly',
+    category: 'image',
+    description: 'AI creative tools integrated with Adobe Creative Cloud.',
+    longDescription: 'Generate and edit images, textures, and designs using AI within Adobe products.',
+    url: 'https://www.adobe.com/products/firefly',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Limited generations',
+        paid: 'Part of Creative Cloud subscription'
     },
-    {
-        id: 'firefly',
-        name: 'Adobe Firefly',
-        category: 'image',
-        description: "Adobe's AI image generation and editing tools.",
-        longDescription: "Firefly offers AI-powered creative tools integrated with Adobe's Creative Cloud suite.",
-        url: 'https://firefly.adobe.com',
-        isNew: true,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Limited generations',
-            paid: 'Part of Creative Cloud subscription'
-        },
-        tags: ['image generation', 'creative', 'editing'],
-        rating: 4.7,
-        usersCount: '5M+'
+    tags: ['design', 'creative', 'image generation'],
+    rating: 4.5,
+    usersCount: '1M+'
+},
+{
+    id: 'tome',
+    name: 'Tome',
+    category: 'presentation',
+    description: 'AI-powered storytelling and presentation platform.',
+    longDescription: 'Create engaging presentations with AI-generated content and designs.',
+    url: 'https://tome.app',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: '$10/month for premium'
     },
-     {
-        id: 'notion',
-        name: 'Notion',
-        category: 'productivity',
-        description: 'All-in-one workspace for notes, tasks, databases, and collaboration.',
-        longDescription: 'Notion integrates note-taking, task management, databases, and collaboration features in a single platform, making it ideal for personal and professional use.',
-        url: 'https://www.notion.so',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Personal use with basic features',
-            paid: 'Starting at $4/month for advanced features and collaboration'
-        },
-        tags: ['notes', 'tasks', 'databases', 'collaboration'],
-        rating: 4.8,
-        usersCount: '20M+'
+    tags: ['presentations', 'storytelling', 'design'],
+    rating: 4.5,
+    usersCount: '300K+'
+},
+{
+    id: 'otter-ai',
+    name: 'Otter.ai',
+    category: 'audio',
+    description: 'AI meeting transcription and note-taking assistant.',
+    longDescription: 'Real-time transcription and summarization of meetings and conversations.',
+    url: 'https://otter.ai',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: '300 minutes/month',
+        paid: 'Starting at $10/month'
     },
-    {
-        id: 'figma',
-        name: 'Figma',
-        category: 'design',
-        description: 'Collaborative interface design tool for teams.',
-        longDescription: 'Figma offers a powerful and collaborative design tool for creating user interfaces, prototypes, and design systems, with real-time collaboration features.',
-        url: 'https://www.figma.com',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features with limited projects',
-            paid: 'Starting at $12/month for professional features'
-        },
-        tags: ['design', 'prototyping', 'collaboration'],
-        rating: 4.9,
-        usersCount: '10M+'
+    tags: ['transcription', 'meetings', 'notes'],
+    rating: 4.6,
+    usersCount: '500K+'
+},
+{
+    id: 'gamma',
+    name: 'Gamma',
+    category: 'presentation',
+    description: 'AI-powered presentation and document creation.',
+    longDescription: 'Create beautiful presentations and documents with AI assistance.',
+    url: 'https://gamma.app',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: '$10/month for premium'
     },
-    {
-        id: 'canva',
-        name: 'Canva',
-        category: 'design',
-        description: 'Easy-to-use graphic design tool for creating social media graphics, presentations, and more.',
-        longDescription: 'Canva offers a user-friendly platform for creating a wide range of visual content, including social media graphics, presentations, posters, and more, with a vast library of templates and assets.',
-        url: 'https://www.canva.com',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features with access to free templates and assets',
-            paid: 'Starting at $12.95/month for Canva Pro'
-        },
-        tags: ['graphic design', 'social media', 'templates', 'visual content'],
-        rating: 4.7,
-        usersCount: '50M+'
+    tags: ['presentations', 'documents', 'design'],
+    rating: 4.4,
+    usersCount: '200K+'
+},
+{
+    id: 'writesonic',
+    name: 'Writesonic',
+    category: 'text',
+    description: 'AI writing tool for marketing and content creation.',
+    longDescription: 'Generate high-quality content for blogs, ads, and marketing materials.',
+    url: 'https://writesonic.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Trial credits',
+        paid: 'Starting at $15/month'
     },
-    {
-        id: 'slack',
-        name: 'Slack',
-        category: 'communication',
-        description: 'Team communication and collaboration platform.',
-        longDescription: 'Slack provides a platform for team communication and collaboration through channels, direct messaging, and integrations with other tools and services.',
-        url: 'https://slack.com',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features with message history limit',
-            paid: 'Starting at $6.67/month per user for standard plan'
-        },
-        tags: ['communication', 'collaboration', 'messaging', 'team'],
-        rating: 4.6,
-        usersCount: '12M+'
+    tags: ['writing', 'marketing', 'content'],
+    rating: 4.4,
+    usersCount: '400K+'
+},
+{
+    id: 'leonardo-ai',
+    name: 'Leonardo.ai',
+    category: 'image',
+    description: 'AI image generation platform for gaming and creative assets.',
+    longDescription: 'Create custom AI-generated assets with style consistency.',
+    url: 'https://leonardo.ai',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: '150 images/month',
+        paid: 'Starting at $10/month'
     },
-    {
-        id: 'trello',
-        name: 'Trello',
-        category: 'productivity',
-        description: 'Visual project management and task tracking tool.',
-        longDescription: 'Trello uses boards, lists, and cards to help teams organize and prioritize projects in a visually appealing and easy-to-use interface.',
-        url: 'https://trello.com',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features with unlimited cards and lists',
-            paid: 'Starting at $5/month per user for business class features'
-        },
-        tags: ['project management', 'task tracking', 'visual organization'],
-        rating: 4.7,
-        usersCount: '10M+'
+    tags: ['image generation', 'gaming', 'assets'],
+    rating: 4.5,
+    usersCount: '500K+'
+},
+{
+    id: 'deepl',
+    name: 'DeepL',
+    category: 'text',
+    description: 'AI-powered language translation with high accuracy.',
+    longDescription: 'Professional-quality translations with context understanding.',
+    url: 'https://www.deepl.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic translation',
+        paid: 'Starting at $7/month'
     },
-    {
-        id: 'monday',
-        name: 'Monday.com',
-        category: 'productivity',
-        description: 'Work operating system to manage teams and projects.',
-        longDescription: 'Monday.com provides a flexible platform to manage workflows, projects, and team collaboration with customizable templates and powerful automation features.',
-        url: 'https://monday.com',
-        isNew: false,
-        pricing: 'paid',
-        pricingDetails: {
-            paid: 'Starting at $8/month per user'
-        },
-        tags: ['project management', 'team collaboration', 'workflow automation'],
-        rating: 4.6,
-        usersCount: '8M+'
+    tags: ['translation', 'language', 'writing'],
+    rating: 4.8,
+    usersCount: '20M+'
+},
+
+// VIDEO AI TOOLS
+{
+    id: 'kapwing',
+    name: 'Kapwing',
+    category: 'video',
+    description: 'Online video editor with AI-powered features.',
+    longDescription: 'Create and edit videos with AI tools for subtitles, transcription, and effects.',
+    url: 'https://www.kapwing.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features with watermark',
+        paid: '$20/month for pro'
     },
-    {
-        id: 'airtable',
-        name: 'Airtable',
-        category: 'database',
-        description: 'Flexible and powerful database tool with a spreadsheet interface.',
-        longDescription: 'Airtable combines the simplicity of a spreadsheet with the power of a database, allowing users to organize and manage various types of data with rich features and integrations.',
-        url: 'https://airtable.com',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features with limited records and attachment space',
-            paid: 'Starting at $10/month per user for more advanced features'
-        },
-        tags: ['database', 'spreadsheet', 'project management', 'collaboration'],
-        rating: 4.8,
-        usersCount: '5M+'
+    tags: ['video editing', 'content creation', 'social media'],
+    rating: 4.4,
+    usersCount: '3M+'
+},
+{
+    id: 'pictory',
+    name: 'Pictory',
+    category: 'video',
+    description: 'AI video creation from long-form content.',
+    longDescription: 'Automatically create short videos from long articles and videos.',
+    url: 'https://pictory.ai',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Starting at $19/month'
     },
-    {
-        id: 'loom',
-        name: 'Loom',
-        category: 'video',
-        description: 'Video messaging tool for work.',
-        longDescription: 'Loom allows users to quickly record and share video messages with their team, offering a more personal and efficient way to communicate asynchronously.',
-        url: 'https://www.loom.com',
-        isNew: false,
-        pricing: 'freemium',
-        pricingDetails: {
-            free: 'Basic features with limited recording time',
-            paid: 'Starting at $8/month per user for pro features'
-        },
-        tags: ['video messaging', 'communication', 'screen recording'],
-        rating: 4.6,
-        usersCount: '2M+'
-    }
+    tags: ['video creation', 'content repurposing', 'automation'],
+    rating: 4.3,
+    usersCount: '100K+'
+},
+
+// IMAGE AI TOOLS
+{
+    id: 'remove-bg',
+    name: 'remove.bg',
+    category: 'image',
+    description: 'AI-powered background removal tool.',
+    longDescription: 'Automatically remove backgrounds from images with high accuracy.',
+    url: 'https://www.remove.bg',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic resolution',
+        paid: 'Credits-based system'
+    },
+    tags: ['image editing', 'background removal', 'design'],
+    rating: 4.8,
+    usersCount: '30M+'
+},
+{
+    id: 'photoroom',
+    name: 'PhotoRoom',
+    category: 'image',
+    description: 'AI photo editing and background removal.',
+    longDescription: 'Edit photos, remove backgrounds, and create product images with AI.',
+    url: 'https://www.photoroom.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: '$9.99/month for pro'
+    },
+    tags: ['photo editing', 'ecommerce', 'design'],
+    rating: 4.7,
+    usersCount: '5M+'
+},
+
+// AUDIO AI TOOLS
+{
+    id: 'soundraw',
+    name: 'Soundraw',
+    category: 'audio',
+    description: 'AI music generation platform.',
+    longDescription: 'Create custom music tracks using AI composition.',
+    url: 'https://soundraw.io',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Starting at $16.99/month'
+    },
+    tags: ['music', 'composition', 'soundtrack'],
+    rating: 4.6,
+    usersCount: '200K+'
+},
+{
+    id: 'podcastle',
+    name: 'Podcastle',
+    category: 'audio',
+    description: 'AI-powered podcast recording and editing.',
+    longDescription: 'Professional podcast creation with AI enhancement features.',
+    url: 'https://podcastle.ai',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Starting at $11.99/month'
+    },
+    tags: ['podcast', 'audio editing', 'voice'],
+    rating: 4.5,
+    usersCount: '300K+'
+},
+
+// BUSINESS AI TOOLS
+{
+    id: 'salesforce-einstein',
+    name: 'Salesforce Einstein',
+    category: 'business',
+    description: 'AI-powered CRM and business intelligence.',
+    longDescription: 'AI tools for sales predictions, customer insights, and automation.',
+    url: 'https://www.salesforce.com/products/einstein/overview',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Contact for pricing'
+    },
+    tags: ['CRM', 'sales', 'analytics'],
+    rating: 4.6,
+    usersCount: '2M+'
+},
+{
+    id: 'gong-io',
+    name: 'Gong.io',
+    category: 'business',
+    description: 'AI-powered revenue intelligence platform.',
+    longDescription: 'Analyze sales calls and meetings for insights and coaching.',
+    url: 'https://www.gong.io',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom pricing'
+    },
+    tags: ['sales', 'analytics', 'coaching'],
+    rating: 4.7,
+    usersCount: '1M+'
+},
+
+// RESEARCH & EDUCATION AI TOOLS
+{
+    id: 'elicit',
+    name: 'Elicit',
+    category: 'research',
+    description: 'AI research assistant for academic papers.',
+    longDescription: 'Find, analyze, and summarize research papers using AI.',
+    url: 'https://elicit.org',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Contact for pricing'
+    },
+    tags: ['research', 'academic', 'analysis'],
+    rating: 4.5,
+    usersCount: '100K+'
+},
+{
+    id: 'scholarai',
+    name: 'Scholar AI',
+    category: 'research',
+    description: 'AI-powered academic research assistant.',
+    longDescription: 'Streamline research with AI paper summaries and insights.',
+    url: 'https://scholarai.io',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic search',
+        paid: '$15/month for premium'
+    },
+    tags: ['research', 'academic', 'papers'],
+    rating: 4.4,
+    usersCount: '50K+'
+},
+
+// MARKETING AI TOOLS
+{
+    id: 'semrush-ai',
+    name: 'Semrush AI Writing',
+    category: 'marketing',
+    description: 'AI-powered SEO and content marketing tools.',
+    longDescription: 'Create SEO-optimized content with AI assistance.',
+    url: 'https://www.semrush.com',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Starting at $119.95/month'
+    },
+    tags: ['SEO', 'content marketing', 'analytics'],
+    rating: 4.7,
+    usersCount: '1M+'
+},
+{
+    id: 'surfer-seo',
+    name: 'Surfer SEO',
+    category: 'marketing',
+    description: 'AI-driven SEO optimization platform.',
+    longDescription: 'Optimize content for search engines using AI analysis.',
+    url: 'https://surferseo.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Starting at $59/month'
+    },
+    tags: ['SEO', 'content optimization', 'marketing'],
+    rating: 4.6,
+    usersCount: '300K+'
+},
+
+// HEALTHCARE AI TOOLS
+{
+    id: 'ada-health',
+    name: 'Ada Health',
+    category: 'healthcare',
+    description: 'AI-powered symptom assessment and health guide.',
+    longDescription: 'Personal health companion using AI to help understand symptoms and conditions.',
+    url: 'https://ada.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic assessment',
+        paid: 'Enterprise solutions'
+    },
+    tags: ['health', 'diagnosis', 'medical'],
+    rating: 4.7,
+    usersCount: '10M+'
+},
+{
+    id: 'babylon-health',
+    name: 'Babylon Health',
+    category: 'healthcare',
+    description: 'AI healthcare platform for consultations and monitoring.',
+    longDescription: 'Digital healthcare service combining AI with medical expertise.',
+    url: 'https://www.babylonhealth.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Subscription-based'
+    },
+    tags: ['healthcare', 'telemedicine', 'monitoring'],
+    rating: 4.5,
+    usersCount: '5M+'
+},
+
+// DESIGN AI TOOLS
+{
+    id: 'uizard',
+    name: 'Uizard',
+    category: 'design',
+    description: 'AI-powered UI/UX design platform.',
+    longDescription: 'Transform sketches and ideas into UI designs using AI.',
+    url: 'https://uizard.io',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Starting at $12/month'
+    },
+    tags: ['UI design', 'prototyping', 'wireframing'],
+    rating: 4.6,
+    usersCount: '500K+'
+},
+{
+    id: 'sketch2code',
+    name: 'Sketch2Code',
+    category: 'design',
+    description: 'Convert hand-drawn designs to HTML/CSS code.',
+    longDescription: 'Microsoft AI tool that transforms sketches into working HTML.',
+    url: 'https://sketch2code.azurewebsites.net',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'All features'
+    },
+    tags: ['web design', 'code generation', 'prototyping'],
+    rating: 4.3,
+    usersCount: '200K+'
+},
+
+// 3D & ANIMATION AI TOOLS
+{
+    id: 'mixamo',
+    name: 'Mixamo',
+    category: '3d',
+    description: 'AI-powered 3D character animation.',
+    longDescription: 'Automatically rig and animate 3D characters.',
+    url: 'https://www.mixamo.com',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Adobe account required'
+    },
+    tags: ['3D animation', 'character rigging', 'motion'],
+    rating: 4.7,
+    usersCount: '1M+'
+},
+{
+    id: 'plask',
+    name: 'Plask',
+    category: '3d',
+    description: 'AI motion capture and animation tool.',
+    longDescription: 'Convert video to 3D animation using AI motion capture.',
+    url: 'https://plask.ai',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Starting at $20/month'
+    },
+    tags: ['motion capture', 'animation', '3D'],
+    rating: 4.4,
+    usersCount: '100K+'
+},
+
+// EDUCATION AI TOOLS
+{
+    id: 'duolingo-ai',
+    name: 'Duolingo AI',
+    category: 'education',
+    description: 'AI-powered language learning platform.',
+    longDescription: 'Personalized language learning with adaptive AI technology.',
+    url: 'https://www.duolingo.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic lessons',
+        paid: '$6.99/month for Plus'
+    },
+    tags: ['language learning', 'education', 'mobile'],
+    rating: 4.8,
+    usersCount: '50M+'
+},
+{
+    id: 'gradescope',
+    name: 'Gradescope',
+    category: 'education',
+    description: 'AI-assisted grading and feedback platform.',
+    longDescription: 'Streamline grading process with AI for educators.',
+    url: 'https://www.gradescope.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Institution-based pricing'
+    },
+    tags: ['education', 'grading', 'assessment'],
+    rating: 4.6,
+    usersCount: '1M+'
+},
+
+// LEGAL AI TOOLS
+{
+    id: 'casetext',
+    name: 'Casetext',
+    category: 'legal',
+    description: 'AI-powered legal research assistant.',
+    longDescription: 'Advanced legal research and analysis using AI technology.',
+    url: 'https://casetext.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Starting at $65/month'
+    },
+    tags: ['legal research', 'law', 'analysis'],
+    rating: 4.7,
+    usersCount: '500K+'
+},
+{
+    id: 'harvey-ai',
+    name: 'Harvey AI',
+    category: 'legal',
+    description: 'AI legal assistant for document analysis.',
+    longDescription: 'Analyze legal documents and contracts using AI.',
+    url: 'https://harvey.ai',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom pricing'
+    },
+    tags: ['legal tech', 'document analysis', 'contracts'],
+    rating: 4.5,
+    usersCount: '50K+'
+},
+
+// FINANCE AI TOOLS
+{
+    id: 'alpaca',
+    name: 'Alpaca',
+    category: 'finance',
+    description: 'AI-powered stock trading platform.',
+    longDescription: 'Automated trading algorithms and market analysis.',
+    url: 'https://alpaca.markets',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Custom pricing'
+    },
+    tags: ['trading', 'finance', 'automation'],
+    rating: 4.6,
+    usersCount: '200K+'
+},
+{
+    id: 'kavout',
+    name: 'Kavout',
+    category: 'finance',
+    description: 'AI-driven investment analysis platform.',
+    longDescription: 'Investment insights and portfolio optimization using AI.',
+    url: 'https://www.kavout.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise pricing'
+    },
+    tags: ['investment', 'analysis', 'finance'],
+    rating: 4.4,
+    usersCount: '100K+'
+},
+  // ARCHITECTURE AI TOOLS
+{
+    id: 'hypar',
+    name: 'Hypar',
+    category: 'architecture',
+    description: 'AI-powered generative design platform for buildings.',
+    longDescription: 'Create and analyze building designs with automated performance analysis and cost estimation.',
+    url: 'https://hypar.io',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic features',
+        paid: 'Starting at $100/month'
+    },
+    tags: ['generative design', 'architecture', 'building analysis'],
+    rating: 4.6,
+    usersCount: '15K+',
+    features: ['Automated design generation', 'Cost analysis', 'Energy modeling']
+},
+{
+    id: 'finch3d',
+    name: 'Finch3D',
+    category: 'architecture',
+    description: 'AI architectural design optimization platform.',
+    longDescription: 'Optimize building designs for cost, energy efficiency, and sustainability using AI.',
+    url: 'https://finch3d.com',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom pricing'
+    },
+    tags: ['architecture', 'optimization', 'sustainability'],
+    rating: 4.5,
+    usersCount: '8K+',
+    features: ['Sustainability analysis', 'Cost optimization', 'Design automation']
+},
+
+// MUSIC PRODUCTION AI TOOLS
+{
+    id: 'melodrive',
+    name: 'Melodrive',
+    category: 'music',
+    description: 'Adaptive AI music generation for games and media.',
+    longDescription: 'Create dynamic, adaptive music that responds to user interactions and emotions.',
+    url: 'https://melodrive.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic generation',
+        paid: '$29/month for pro'
+    },
+    tags: ['adaptive music', 'game audio', 'interactive'],
+    rating: 4.7,
+    usersCount: '50K+',
+    features: ['Real-time adaptation', 'Emotion-based composition', 'Game integration']
+},
+{
+    id: 'landr',
+    name: 'LANDR',
+    category: 'music',
+    description: 'AI mastering and music distribution platform.',
+    longDescription: 'Professional-grade audio mastering and distribution using advanced AI algorithms.',
+    url: 'https://www.landr.com',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic mastering',
+        paid: 'From $9/month'
+    },
+    tags: ['mastering', 'distribution', 'audio production'],
+    rating: 4.6,
+    usersCount: '300K+',
+    features: ['AI mastering', 'Distribution services', 'Sample library']
+},
+
+// SPACE TECHNOLOGY AI TOOLS
+{
+    id: 'astroscale',
+    name: 'Astroscale',
+    category: 'space',
+    description: 'AI-powered space debris removal technology.',
+    longDescription: 'Autonomous satellite systems for space debris capture and removal.',
+    url: 'https://astroscale.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise solutions'
+    },
+    tags: ['space debris', 'satellite servicing', 'space sustainability'],
+    rating: 4.8,
+    usersCount: '1K+',
+    features: ['Debris capture', 'Autonomous navigation', 'Mission planning']
+},
+{
+    id: 'arlula',
+    name: 'Arlula',
+    category: 'space',
+    description: 'AI satellite imagery analysis platform.',
+    longDescription: 'Access and analyze satellite imagery using AI for various applications.',
+    url: 'https://www.arlula.com',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic access',
+        paid: 'Custom pricing'
+    },
+    tags: ['satellite imagery', 'earth observation', 'analysis'],
+    rating: 4.5,
+    usersCount: '5K+',
+    features: ['Image analysis', 'Data integration', 'Custom algorithms']
+},
+
+// TRANSPORTATION AI TOOLS
+{
+    id: 'bestmile',
+    name: 'Bestmile',
+    category: 'transportation',
+    description: 'AI fleet orchestration platform.',
+    longDescription: 'Optimize and manage autonomous and human-driven vehicle fleets.',
+    url: 'https://bestmile.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise pricing'
+    },
+    tags: ['fleet management', 'autonomous vehicles', 'mobility'],
+    rating: 4.7,
+    usersCount: '10K+',
+    features: ['Fleet optimization', 'Demand prediction', 'Route planning']
+},
+{
+    id: 'smartersorting',
+    name: 'Smarter Sorting',
+    category: 'transportation',
+    description: 'AI-powered logistics optimization platform.',
+    longDescription: 'Optimize shipping and sorting operations using AI and machine learning.',
+    url: 'https://smartersorting.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom solutions'
+    },
+    tags: ['logistics', 'sorting', 'optimization'],
+    rating: 4.6,
+    usersCount: '5K+',
+    features: ['Route optimization', 'Package classification', 'Regulatory compliance']
+},
+
+// MANUFACTURING AI TOOLS
+{
+    id: 'falkonry',
+    name: 'Falkonry',
+    category: 'manufacturing',
+    description: 'AI-powered predictive operations platform.',
+    longDescription: 'Predict and prevent operational issues in manufacturing using machine learning.',
+    url: 'https://falkonry.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise licensing'
+    },
+    tags: ['predictive operations', 'manufacturing', 'maintenance'],
+    rating: 4.7,
+    usersCount: '15K+',
+    features: ['Anomaly detection', 'Predictive maintenance', 'Process optimization']
+},
+{
+    id: 'neurala',
+    name: 'Neurala',
+    category: 'manufacturing',
+    description: 'AI vision systems for manufacturing.',
+    longDescription: 'Visual inspection and quality control using AI computer vision.',
+    url: 'https://www.neurala.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom pricing'
+    },
+    tags: ['visual inspection', 'quality control', 'computer vision'],
+    rating: 4.6,
+    usersCount: '10K+',
+    features: ['Defect detection', 'Quality assurance', 'Real-time monitoring']
+}
+
+
+
 ];
 
   // Add these new tools to your existing toolsData array
@@ -555,7 +1111,212 @@ const newTools = [
         tags: ['education', 'quiz', 'learning'],
         rating: 4.6,
         usersCount: '5M+'
-    }
+    },
+  // GAMING AI TOOLS
+{
+    id: 'nvidia-dlss',
+    name: 'NVIDIA DLSS',
+    category: 'gaming',
+    description: 'AI-powered graphics upscaling for games.',
+    longDescription: 'Deep Learning Super Sampling technology for improved gaming performance and visuals.',
+    url: 'https://www.nvidia.com/dlss',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Included with supported GPUs'
+    },
+    tags: ['gaming', 'graphics', 'performance'],
+    rating: 4.8,
+    usersCount: '50M+'
+},
+{
+    id: 'modl-ai',
+    name: 'modl.ai',
+    category: 'gaming',
+    description: 'AI game testing and development platform.',
+    longDescription: 'Automated game testing and balancing using AI agents.',
+    url: 'https://modl.ai',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom enterprise pricing'
+    },
+    tags: ['game development', 'testing', 'automation'],
+    rating: 4.5,
+    usersCount: '10K+'
+},
+
+// SCIENTIFIC RESEARCH AI TOOLS
+{
+    id: 'alphafold',
+    name: 'AlphaFold',
+    category: 'science',
+    description: 'AI system for protein structure prediction.',
+    longDescription: 'DeepMind's AI system for predicting 3D protein structures.',
+    url: 'https://alphafold.ebi.ac.uk',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Open access for research'
+    },
+    tags: ['protein folding', 'biology', 'research'],
+    rating: 4.9,
+    usersCount: '1M+'
+},
+{
+    id: 'deepchem',
+    name: 'DeepChem',
+    category: 'science',
+    description: 'AI platform for drug discovery and chemistry.',
+    longDescription: 'Open-source AI tools for chemical science and drug development.',
+    url: 'https://deepchem.io',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Open source'
+    },
+    tags: ['chemistry', 'drug discovery', 'research'],
+    rating: 4.6,
+    usersCount: '100K+'
+},
+
+// ROBOTICS AI TOOLS
+{
+    id: 'ros-ai',
+    name: 'ROS AI',
+    category: 'robotics',
+    description: 'AI framework for robot operating systems.',
+    longDescription: 'Artificial Intelligence tools and libraries for robotic systems.',
+    url: 'https://www.ros.org',
+    isNew: false,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Open source'
+    },
+    tags: ['robotics', 'automation', 'development'],
+    rating: 4.7,
+    usersCount: '500K+'
+},
+{
+    id: 'nvidia-isaac',
+    name: 'NVIDIA Isaac',
+    category: 'robotics',
+    description: 'AI platform for robotics development.',
+    longDescription: 'Comprehensive toolkit for building and deploying robotic AI applications.',
+    url: 'https://developer.nvidia.com/isaac-sdk',
+    isNew: false,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic SDK',
+        paid: 'Enterprise features'
+    },
+    tags: ['robotics', 'simulation', 'development'],
+    rating: 4.6,
+    usersCount: '100K+'
+},
+
+// CYBERSECURITY AI TOOLS
+{
+    id: 'darktrace',
+    name: 'Darktrace',
+    category: 'security',
+    description: 'AI-powered cyber defense platform.',
+    longDescription: 'Enterprise security using AI to detect and respond to threats.',
+    url: 'https://www.darktrace.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise pricing'
+    },
+    tags: ['cybersecurity', 'threat detection', 'enterprise'],
+    rating: 4.8,
+    usersCount: '5K+'
+},
+{
+    id: 'cylance',
+    name: 'Cylance',
+    category: 'security',
+    description: 'AI antivirus and endpoint protection.',
+    longDescription: 'Predictive AI-based security solution for endpoint protection.',
+    url: 'https://www.cylance.com',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Per endpoint pricing'
+    },
+    tags: ['security', 'antivirus', 'endpoint protection'],
+    rating: 4.7,
+    usersCount: '100K+'
+},
+
+// AGRICULTURE AI TOOLS
+{
+    id: 'prospera',
+    name: 'Prospera',
+    category: 'agriculture',
+    description: 'AI-powered agriculture management platform.',
+    longDescription: 'Computer vision and AI for crop management and optimization.',
+    url: 'https://prospera.ag',
+    isNew: false,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Custom pricing'
+    },
+    tags: ['agriculture', 'crop management', 'automation'],
+    rating: 4.6,
+    usersCount: '10K+'
+},
+{
+    id: 'farmwise',
+    name: 'FarmWise',
+    category: 'agriculture',
+    description: 'AI farming robots and automation.',
+    longDescription: 'Autonomous farming solutions using AI and robotics.',
+    url: 'https://farmwise.io',
+    isNew: true,
+    pricing: 'paid',
+    pricingDetails: {
+        paid: 'Enterprise solutions'
+    },
+    tags: ['farming', 'robotics', 'automation'],
+    rating: 4.5,
+    usersCount: '1K+'
+},
+
+// CLIMATE & ENVIRONMENT AI TOOLS
+{
+    id: 'climatemind',
+    name: 'ClimateMind',
+    category: 'climate',
+    description: 'AI for climate change analysis and solutions.',
+    longDescription: 'AI platform for understanding and addressing climate challenges.',
+    url: 'https://climatemind.org',
+    isNew: true,
+    pricing: 'free',
+    pricingDetails: {
+        free: 'Open access'
+    },
+    tags: ['climate', 'environment', 'sustainability'],
+    rating: 4.4,
+    usersCount: '50K+'
+},
+{
+    id: 'terrawatch',
+    name: 'TerraWatch',
+    category: 'climate',
+    description: 'AI-powered environmental monitoring.',
+    longDescription: 'Satellite imagery analysis for environmental protection.',
+    url: 'https://terrawatch.ai',
+    isNew: true,
+    pricing: 'freemium',
+    pricingDetails: {
+        free: 'Basic monitoring',
+        paid: 'Advanced features'
+    },
+    tags: ['environmental monitoring', 'satellite', 'analysis'],
+    rating: 4.5,
+    usersCount: '10K+'
+}
 ];
 
 // Add these new tools to your existing toolsData array
